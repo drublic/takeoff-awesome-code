@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 
 			content: {
 				files: 'content/*.html',
-				tasks: 'concat:dist'
+				tasks: 'concat'
 			}
 		}
 
@@ -96,6 +96,8 @@ module.exports = function(grunt) {
 
 	// Dependencies
 	grunt.loadNpmTasks( 'grunt-contrib-mincss' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'lint', 'mincss', 'min', 'concat' ] );
