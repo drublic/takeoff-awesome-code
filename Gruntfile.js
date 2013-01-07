@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
 		meta: {
 			version: '2.2',
-			banner: 
+			banner:
 				'/*!\n' +
 				' * reveal.js <%= meta.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
 				' * http://lab.hakim.se/reveal-js\n' +
@@ -30,6 +30,18 @@ module.exports = function(grunt) {
 		// Tests will be added soon
 		qunit: {
 			files: [ 'test/**/*.html' ]
+		},
+
+		// Content
+		concat: {
+			dist: {
+				src: [
+					'content/header.html',
+					'content/intro.html',
+					'content/footer.html'
+				],
+				dest: 'index.html'
+			}
 		},
 
 		min: {
@@ -69,16 +81,23 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			files: [ 'grunt.js', '<%= inputJS %>', '<%= inputCSS %>' ],
-			tasks: 'default'
+			_default: {
+				files: [ 'grunt.js', '<%= inputJS %>', '<%= inputCSS %>' ],
+				tasks: 'default'
+			},
+
+			content: {
+				files: 'content/*.html',
+				tasks: 'concat:dist'
+			}
 		}
 
 	});
-	
+
 	// Dependencies
 	grunt.loadNpmTasks( 'grunt-contrib-mincss' );
 
 	// Default task
-	grunt.registerTask( 'default', [ 'lint', 'mincss', 'min' ] );
+	grunt.registerTask( 'default', [ 'lint', 'mincss', 'min', 'concat' ] );
 
 };
