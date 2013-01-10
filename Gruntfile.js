@@ -40,6 +40,8 @@ module.exports = function(grunt) {
 					'content/intro.html',
 					'content/code-style.html',
 					'content/code-smell.html',
+					'content/practical.html',
+					'content/outro.html',
 					'content/footer.html'
 				],
 				dest: 'index.html'

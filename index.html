@@ -144,6 +144,251 @@
 	</section>
 </section>
 
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			# Code Smell
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Code Smell is
+
+			deeper problem in your code
+
+			not bugs - not technically incorrect
+
+			weaknesses in design
+
+			higher risk of bugs
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			> If it stinks, change it.
+
+			<br>
+
+			<small>citet by Kent Beck in "Refactoring: Improving the Design of Existing Code"</small>
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			# Principles
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Don‘t repeat yourself
+
+			<small>[DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)</small>
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Don‘t write code in advance
+
+			<small>[YAGNI](http://en.wikipedia.org/wiki/You_ain't_gonna_need_it)</small>
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Worse is Better
+
+			<span style="font-size: 1.8em">Simplicity</span>
+
+			<span style="font-size: 1.2em">Correctness</span>
+
+			Consistency
+
+			<small>Completeness</small>
+
+			<br>
+			<small>[Worse is better](http://en.wikipedia.org/wiki/Worse_is_better)</small>
+		</script>
+	</section>
+
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			# Good Code
+
+			### Don‘t confuse others!
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			> Awww, this is so smart!
+
+			```
+			var ಠ_ಠ = ლ_ಠ益ಠ_ლ === ☃ ?
+			           (☃ + π == 0 ? "\u2603" : ß) :
+			           3.1415926535897931159979634685
+			```
+
+			<h1 class="fragment">No, it‘s not!</h1>
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Code is written for humans
+			## not machines
+		</script>
+	</section>
+</section>
+</section>
+
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			# Front-end
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# HTML
+
+			Build it awesome.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Douchy Soup
+
+			<pre><code>&lt;div class="article"&gt;
+			    &lt;div class="article-header"&gt;
+			        &lt;div class="article-headline"&gt;Some stupid headline&lt;/div&gt;
+			        &lt;span class="article-date"&gt;04.10.2012&lt;/span&gt;
+			    &lt;/div&gt;
+			    &lt;div class="article-body"&gt;...&lt;/div&gt;
+			&lt;/div&gt;
+			</code></pre>
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Awesomeness
+
+			<pre><code>
+			&lt;article&gt;
+			    &lt;header&gt;
+			        &lt;h1&gt;Some stupid headline&lt;/h1&gt;
+			        &lt;time&gt;04.10.2012&lt;/time&gt;
+			    &lt;/header&gt;
+			    &lt;div class="article-body"&gt;...&lt;/div&gt;
+			&lt;/article&gt;
+			</code></pre>
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# CSS
+
+			Naming Conventions &amp; Robust Patterns.
+
+			[Re-use](http://css-tricks.com/a-discussion-about-css-reusability/) Code.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# JavaScript
+
+			Use naming conventions.
+
+			Decouple things.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# JavaScript
+
+			<pre><code>var peter = "&lt;div class=\"person\"&gt;\
+	        &lt;div class=\"some-classname\"&gt;\
+	        &lt;/div&gt;&lt;/div&gt;";
+
+	$peter = $('body').css({ display: "block" }).append(peter);
+
+	var classText = "Douchy Text";
+	var text = $('.person').find('.some-classname').text(classText);
+			</code></pre>		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Use JSHint
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Test your code
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			# As a Result…
+
+			"Easier to read"-code
+
+			Faster development
+
+			Prevents confusion
+
+			More "real" work
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# THINK!
+
+			Is it necessary?
+
+			How can I improve it?
+
+			Why might it be slow?
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			#### Please remember:
+
+			# Less is more
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<h1 class="inverted">Questions?</h1>
+
+		# ♥
+	</section>
+
+</section>
 
 
 			</div>
